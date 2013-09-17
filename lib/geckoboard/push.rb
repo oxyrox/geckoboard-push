@@ -76,7 +76,7 @@ module Geckoboard
 
     # Value, min and max should be numeric values
     def geckometer(value, min, max, reverse = false)
-      params = :item => value, :min => {:value => min}, :max => {:value => max}
+      params = { :item => value, :min => {:value => min}, :max => {:value => max} }
       if reverse
         params.merge!(:type => "reverse")
       end
